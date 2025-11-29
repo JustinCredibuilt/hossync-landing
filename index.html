@@ -17,7 +17,7 @@
       <span class="font-semibold">HoS Sync</span> connects your ELD logs with your payroll system,  
       eliminating errors, preventing over/underpayments, and saving countless admin hours for Hourly drivers.
     </p>
-    <form class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+    <form id="topForm" class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
       <input 
         type="email" 
         placeholder="Enter your email" 
@@ -81,19 +81,26 @@
         </button>
       </form>
       <script>
-document.getElementById("signupForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const email = e.target.email.value;
+function wireUp(formId) {
+  const form = document.getElementById(formId);
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
 
-  const response = await fetch("https://late-sunset-568f.curly-band-e172.workers.dev/api/subscribe", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email })
+    const response = await fetch("https://late-sunset-568f.curly-band-e172.workers.dev/api/subscribe", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email })
+    });
+
+    const json = await response.json();
+    alert(json.message);
   });
+}
 
-  const json = await response.json();
-  alert(json.message);
-});
+wireUp("signupForm");
+wireUp("topForm");
+
 </script>
     </div>
   </section>
