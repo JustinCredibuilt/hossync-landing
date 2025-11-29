@@ -68,7 +68,7 @@
       <p class="mb-6 text-blue-100">Join our waitlist today and streamline your fleet’s payroll process.</p>
       <form id="signupForm" class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
         <input 
-          type="email" 
+          type="email" name="email"
           placeholder="Enter your email" 
           class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-white" 
           required
@@ -80,14 +80,7 @@
           Join the Waitlist
         </button>
       </form>
-    </div>
-  </section>
-
-  <footer class="text-center text-gray-400 py-6 text-sm">
-    © 2025 HoS Sync. All rights reserved.
-  </footer>
-
-  <script>
+      <script>
 document.getElementById("signupForm").addEventListener("submit", async (e) => {
   e.preventDefault();
   const email = e.target.email.value;
@@ -102,5 +95,11 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
   alert(json.message);
 });
 </script>
+    </div>
+  </section>
+
+  <footer class="text-center text-gray-400 py-6 text-sm">
+    © 2025 HoS Sync. All rights reserved.
+  </footer>
 </body>
 </html>
