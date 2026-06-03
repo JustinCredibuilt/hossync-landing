@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 100" role="img" aria-labelledby="title">
+  <title id="title">Motive</title>
+  <rect width="360" height="100" fill="none"/>
+  <g fill="#111827">
+    <path d="M32 68V32h17l18 23 18-23h17v36H86V50L68 72h-2L48 50v18H32z"/>
+    <text x="112" y="68" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="800" letter-spacing="-2">otive</text>
+  </g>
+</svg>
